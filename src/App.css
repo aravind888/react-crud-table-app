@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+:root {
+  --spacing: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.w-100 {
+  width: 100%;
+}
+.hu-section {
+  height: 100vh;
+  overflow-y: auto;
+}
+a {
+  display: inline-block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.hu-section {
+  padding: calc(var(--spacing) * 4) var(--spacing) var(--spacing);
+}
+
+.ant-layout-sider-zero-width-trigger-left {
+  top: var(--spacing) !important;
+  inset-inline-end: calc(-3 * var(--spacing) ) !important;
+  border-radius: 6px !important;
+}
+
+/* .hu-sidebar {
+  overflow: hidden;
+} */
+
+@media (min-width: 992px) {
+  .hu-sidebar {
+    padding: 10px;
+  }
+  .hu-section {
+    padding: 40px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (min-width: 1200px) {
+  .hu-table__col-actions {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  .hu-table__row:hover .hu-table__col-actions {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+.hu-sidebar__menu-item {
+  width: 100%;
+  padding: 10px 30px;
+  color: #000000 !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hu-table .ant-table {
+  overflow-x: auto;
+}
+
+.hu-profile {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  background-color: rgb(192, 192, 192);
+  margin-bottom: 30px;
+}
+
+.hu-sidebar__menu {
+  width: 200px;
+  min-width: 200px;
+  border-inline-end: none !important;
+}
+
+.hu-table .ant-form-item {
+  margin-bottom: 0 !important;
+}
+.hu-error {
+  color: red;
 }
